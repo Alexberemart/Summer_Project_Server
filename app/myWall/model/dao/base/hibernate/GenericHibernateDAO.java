@@ -1,15 +1,11 @@
-package com.grupoasv.model.dao.base.hibernate;
-
-
-import com.grupoasv.model.dao.base.GenericDAO;
+package myWall.model.dao.base.hibernate;
 
 import java.io.Serializable;
-
 
 /**
  * GenericDAO extension for Hibernate based implementations
  *
  */
-public interface GenericHibernateDAO<T, ID extends Serializable> extends GenericDAO<T, ID> {
+public interface GenericHibernateDAO<T, ID extends Serializable> extends myWall.model.dao.base.GenericDAO<T, ID> {
 	//
 }

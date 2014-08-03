@@ -1,4 +1,4 @@
-package com.grupoasv.model.exception;
+package myWall.model.exception;
 
 
 public enum MessageCRUDEnum {LOAD("ExceptionLOAD"),

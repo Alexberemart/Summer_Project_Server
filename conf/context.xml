@@ -66,7 +66,7 @@
         </property>
         <property name="packagesToScan">
             <list>
-                <value>com.grupoasv.model.vo</value>
+                <value>myWall.model.vo</value>
             </list>
         </property>
     </bean>
@@ -107,14 +107,13 @@
         </property>
     </bean>
 
-
-    <bean id="houseDAO"
+    <bean id="messageDAO"
           class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
         <property name="transactionManager">
             <ref local="transactionManager" />
         </property>
         <property name="target">
-            <ref local="houseDAOTarget" />
+            <ref local="messageDAOTarget" />
         </property>
         <property name="transactionAttributes">
             <props>
@@ -124,66 +123,17 @@
         </property>
     </bean>
 
-    <bean id="houseDAOTarget"
-          class="com.grupoasv.model.dao.impl.HouseDAOImpl">
+    <bean id="messageDAOTarget"
+          class="myWall.model.dao.impl.MessageDAOImpl">
         <qualifier value="target" />
         <property name="hibernateTemplate">
             <ref local="hibernateTemplate" />
         </property>
     </bean>
 
-
-    <bean id="cleaningTechnicalAssistantDAO"
-          class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
-        <property name="transactionManager">
-            <ref local="transactionManager" />
-        </property>
-        <property name="target">
-            <ref local="cleaningTechnicalAssistantDAOTarget" />
-        </property>
-        <property name="transactionAttributes">
-            <props>
-                <prop key="makePersistent">PROPAGATION_REQUIRED</prop>
-                <prop key="find*">PROPAGATION_REQUIRED, readOnly</prop>
-            </props>
-        </property>
+    <bean id="messageServices" class="myWall.controllers.MessageServices">
     </bean>
 
-    <bean id="cleaningTechnicalAssistantDAOTarget"
-          class="com.grupoasv.model.dao.impl.CleaningTechnicalAssistantDAOImpl">
-        <qualifier value="target" />
-        <property name="hibernateTemplate">
-            <ref local="hibernateTemplate" />
-        </property>
-    </bean>
-
-    <bean id="cleaningStockDAO"
-          class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
-        <property name="transactionManager">
-            <ref local="transactionManager" />
-        </property>
-        <property name="target">
-            <ref local="cleaningStockDAOTarget" />
-        </property>
-        <property name="transactionAttributes">
-            <props>
-                <prop key="makePersistent">PROPAGATION_REQUIRED</prop>
-                <prop key="find*">PROPAGATION_REQUIRED, readOnly</prop>
-            </props>
-        </property>
-    </bean>
-
-    <bean id="cleaningStockDAOTarget"
-          class="com.grupoasv.model.dao.impl.CleaningStockDAOImpl">
-        <qualifier value="target" />
-        <property name="hibernateTemplate">
-            <ref local="hibernateTemplate" />
-        </property>
-    </bean>
-
-    <bean id="cleaningTechnicalAsistantServices" class="com.grupoasv.controllers.CleaningTechnicalAsistantServices">
-    </bean>
-
-    <context:component-scan base-package="com.grupoasv" />
+    <context:component-scan base-package="myWall" />
 
 </beans>

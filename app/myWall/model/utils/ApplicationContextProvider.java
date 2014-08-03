@@ -1,4 +1,4 @@
-package com.grupoasv.model.utils;
+package myWall.model.utils;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

@@ -1,6 +1,6 @@
-package com.grupoasv.model.dao.base.hibernate.spring.impl;
+package myWall.model.dao.base.hibernate.spring.impl;
 
-import com.grupoasv.model.dao.base.hibernate.GenericHibernateDAO;
+import myWall.model.dao.base.hibernate.GenericHibernateDAO;
 import org.hibernate.*;
 import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.DetachedCriteria;

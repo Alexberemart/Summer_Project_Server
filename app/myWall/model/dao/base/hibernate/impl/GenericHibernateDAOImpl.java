@@ -2,9 +2,9 @@
 
 
  */
-package com.grupoasv.model.dao.base.hibernate.impl;
+package myWall.model.dao.base.hibernate.impl;
 
-import com.grupoasv.model.dao.base.hibernate.GenericHibernateDAO;
+import myWall.model.dao.base.hibernate.GenericHibernateDAO;
 import org.hibernate.Criteria;
 import org.hibernate.LockMode;
 import org.hibernate.Session;

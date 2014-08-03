@@ -1,4 +1,4 @@
-package com.grupoasv.model.dao.base.hibernate;
+package myWall.model.dao.base.hibernate;
 
 import org.hibernate.HibernateException;
 import org.hibernate.type.NullableType;

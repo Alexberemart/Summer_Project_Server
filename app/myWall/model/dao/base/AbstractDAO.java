@@ -1,4 +1,4 @@
-package com.grupoasv.model.dao.base;
+package myWall.model.dao.base;
 
 
 import java.util.List;

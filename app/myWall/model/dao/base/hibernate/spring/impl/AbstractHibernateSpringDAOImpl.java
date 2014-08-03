@@ -1,7 +1,7 @@
-package com.grupoasv.model.dao.base.hibernate.spring.impl;
+package myWall.model.dao.base.hibernate.spring.impl;
 
 
-import com.grupoasv.model.dao.base.hibernate.AbstractHibernateDAO;
+import myWall.model.dao.base.hibernate.AbstractHibernateDAO;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
