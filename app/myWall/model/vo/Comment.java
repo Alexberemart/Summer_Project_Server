@@ -6,17 +6,16 @@ import org.hibernate.annotations.Entity;
 import javax.persistence.*;
 
 @Entity(dynamicUpdate = true)
-@Table(name = "Messages")
+@Table(name = "Comments")
 @javax.persistence.Entity
 @JsonAutoDetect
-public class Message {
+public class Comment {
 
     protected String id;
     protected String name;
     protected String text;
+    protected String id_message;
     protected String date_time;
-    protected Integer likes;
-    protected Integer comments;
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -47,6 +46,15 @@ public class Message {
         this.text = text;
     }
 
+    @Column(name = "id_message", length = 32)
+    public String getId_message() {
+        return id_message;
+    }
+
+    public void setId_message(String id_message) {
+        this.id_message = id_message;
+    }
+
     @Column(name = "date_time", length = 32)
     public String getDate_time() {
         return date_time;
@@ -54,23 +62,5 @@ public class Message {
 
     public void setDate_time(String date_time) {
         this.date_time = date_time;
-    }
-
-    @Column(name = "likes", length = 32)
-    public Integer getLikes() {
-        return likes;
-    }
-
-    public void setLikes(Integer likes) {
-        this.likes = likes;
-    }
-
-    @Column(name = "comments", length = 32)
-    public Integer getComments() {
-        return comments;
-    }
-
-    public void setComments(Integer comments) {
-        this.comments = comments;
     }
 }

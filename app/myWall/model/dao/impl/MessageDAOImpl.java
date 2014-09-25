@@ -19,4 +19,12 @@ public class MessageDAOImpl extends GenericHibernateSpringDAOImpl<Message, Strin
 
         return returnValue;
     }
+
+    @Override
+    public void saveMessages(List<Message> messageList) {
+
+        for (Message aMessageList : messageList) {
+            super.makePersistent(aMessageList);
+        }
+    }
 }
